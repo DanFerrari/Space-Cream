@@ -1,0 +1,170 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+:root{
+  font-size: 62.5%;
+
+  /* font's */
+
+  --font-titles:'Staatliches', cursive;
+  --font-corpo:'Palanquin', sans-serif;
+  
+  
+  
+  /* color */
+  --color-strong:#4a4e69;
+  --color-gray:#8e9aaf;
+  --color-salmon:#cbc0d3;
+  --color-light-pink:#feeafa;
+  --white-smoke:#eff1ff;
+
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background: var(--white-smoke);
+
+}
+
+h1,h2{
+  font-family: var(--font-titles);
+  letter-spacing: 0.05em;
+  
+}
+
+img{
+  width:clamp(20rem,30rem,60rem);
+
+  
+}
+
+header{
+  width: 100%;
+  height: 27.9rem;
+
+  background: var(--color-gray);
+  
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3.2rem;
+  
+}
+
+
+header h1{
+  font-size: 4rem;
+line-height: 3.4rem;
+
+
+color: white;
+text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+padding: 8px 0;
+width: 100%;
+
+text-align: center;
+
+background: var(--color-salmon);
+
+}
+
+main{
+  width: 100%;
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+
+    
+}
+
+main p{
+  width:30rem;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  font-family: var(--font-corpo);
+  color: #23053a;
+  font-size: 20px;
+line-height: 15px;
+
+margin-top: 2.8rem;
+
+
+}
+
+.products{
+  position: relative;
+  
+
+
+
+}
+
+.products img{
+  
+ border-radius: 20px;
+ animation: downup 700ms 100ms ease;
+}
+
+.products h2{
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  padding:0.2rem 2.5rem 0.2rem 2rem;
+  border-radius: 20px;
+  font-size: 20px;
+line-height: 34px;
+
+color: #4A4E69;
+  background: var(--color-light-pink);
+
+  margin: 16px 16px 0 0;
+
+  animation: updown 700ms 200ms ease;
+  
+}
+
+
+
+
+
+
+@keyframes downup{
+  0%{
+    transform: translateY(30px);
+    opacity: 0;
+    
+  }
+
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes updown{
+  0%{
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
